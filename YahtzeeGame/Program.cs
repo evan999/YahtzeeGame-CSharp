@@ -10,6 +10,10 @@ namespace YahtzeeGame
     {
         static void Main(string[] args)
         {
+            Game gameSession = new Game();
+            // gameSession.RollGameDie();
+            gameSession.RollGameDice();
+            Console.ReadLine();
         }
     }
 }
