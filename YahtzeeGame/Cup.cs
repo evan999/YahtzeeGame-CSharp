@@ -6,29 +6,15 @@ using System.Threading.Tasks;
 
 namespace YahtzeeGame
 {
-    public class Game
+    public class Cup
     {
         Random randomizer = new Random();
-        GameDie die1 = new GameDie();
-        //int numberOfDice = 5;
-        //int maxNumberOfRolls = 3;
 
-        public int RollGameDie()
-        {           
-            // Random randomizer = new Random();
-            int roll = randomizer.Next(1, 7);
-            die1.value = roll;
-            Console.WriteLine("Die: " + die1.value);
-            return roll;
-        }
-
-        
-        public int[] RollGameDice(int numberOfDice)
+        public int[] RollGameDice(int numberOfDice, int numberOfRolls)
         {
-            
             int[] cup = new int[numberOfDice];
-            Random randomizer = new Random();
-           
+            // Random randomizer = new Random();
+
             //var cup = new List<GameDie>();
 
             for (int dice = 0; dice < numberOfDice; dice++)
@@ -37,10 +23,24 @@ namespace YahtzeeGame
                 Console.WriteLine("Die: " + cup[dice].ToString());
                 //string name = "die" + dice.ToString();
                 //cup.Add(new GameDie());    
-            }    
+            }
             return cup;
         }
-        
 
+        public int[,] RollGameDiceThreeTimes(int numberOfDice, int numberOfRolls)
+        {
+            int[,] rolls = new int[numberOfDice,numberOfRolls];
+
+            for (int roll = 0; roll < numberOfRolls; roll++)
+            {
+                for (int die = 0; die < numberOfDice; die++)
+                {
+                    rolls[roll,die] = randomizer.Next(1, 7);
+                    
+                }
+            }
+            return rolls;
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YahtzeeGame
 {
-    class GameDie
+    public class GameDie
     {
         // public string name;
         public int value;

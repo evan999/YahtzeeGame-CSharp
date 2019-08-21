@@ -11,8 +11,12 @@ namespace YahtzeeGame
         static void Main(string[] args)
         {
             Game gameSession = new Game();
+            Cup gameCup = new Cup();
+            int numberOfDice = 5;
+            int maxNumberOfRolls = 3;
             // gameSession.RollGameDie();
-            gameSession.RollGameDice();
+            // gameCup.RollGameDice(numberOfDice, maxNumberOfRolls);
+            gameCup.RollGameDiceThreeTimes(numberOfDice, maxNumberOfRolls);
             Console.ReadLine();
         }
     }
