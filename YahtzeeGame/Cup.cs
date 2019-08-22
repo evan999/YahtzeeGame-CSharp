@@ -29,15 +29,19 @@ namespace YahtzeeGame
 
         public int[,] RollGameDiceThreeTimes(int numberOfDice, int numberOfRolls)
         {
-            int[,] rolls = new int[numberOfDice,numberOfRolls];
+            int[,] rolls = new int[numberOfRolls, numberOfDice];
+
 
             for (int roll = 0; roll < numberOfRolls; roll++)
             {
                 for (int die = 0; die < numberOfDice; die++)
                 {
                     rolls[roll,die] = randomizer.Next(1, 7);
-                    
+                    // Console.Write("Round: " + die + " ");
+                    Console.Write("{0} ", rolls[roll,die]);
+                        
                 }
+                Console.WriteLine();
             }
             return rolls;
 

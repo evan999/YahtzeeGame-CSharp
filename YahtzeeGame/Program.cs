@@ -15,7 +15,7 @@ namespace YahtzeeGame
             int numberOfDice = 5;
             int maxNumberOfRolls = 3;
             // gameSession.RollGameDie();
-            // gameCup.RollGameDice(numberOfDice, maxNumberOfRolls);
+            gameCup.RollGameDice(numberOfDice, maxNumberOfRolls);
             gameCup.RollGameDiceThreeTimes(numberOfDice, maxNumberOfRolls);
             Console.ReadLine();
         }
